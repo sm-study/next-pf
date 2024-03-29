@@ -1,9 +1,8 @@
-
 --- 
 
 id: 5
 title: "5つ目の記事"
-data: "2024-03-05"
+date: "2024-03-05"
 image: ""
 excerpt: ""
 

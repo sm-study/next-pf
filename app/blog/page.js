@@ -6,9 +6,7 @@ async function getAllBlogs() {
   const files = fs.readdirSync(path.join("data"))
   const blogs = files.map((fileName) => {
     const fileData = fs.readFileSync(path.join("data", fileName), "utf-8")
-    const { data } = matter(fileData)
-
-    console.log(matter(fileData))
+    const data = matter(fileData)
 
     return {
       frontmatter: data,
@@ -26,9 +24,10 @@ const Blog = async() => {
     <>
       <h1>ブログページ</h1>
       {blogs.map((blog, index) => {
+        {console.log(blog.frontmatter.data.title)}
         <div key={index}>
-          <h2>{blog.frontmatter.title}</h2>
-          <p>{blog.frontmatter.date}</p>
+          <h2>{blog.frontmatter.data.title}</h2>
+          <p>{blog.frontmatter.data.date}</p>
         </div>
       })}
     </>

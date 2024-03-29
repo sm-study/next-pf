@@ -1,9 +1,8 @@
-
 --- 
 
 id: 3
 title: "3つ目の記事"
-data: "2024-03-03"
+date: "2024-03-03"
 image: ""
 excerpt: ""
 
